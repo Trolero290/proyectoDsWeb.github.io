@@ -2,7 +2,7 @@ body{
     font-family: Arial, sans-serif;
     padding: 0;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(to right, #3297ad, #105161);
 }
   
@@ -17,7 +17,7 @@ body{
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 650px; 
+    width: 100; 
     height: 50%;
 }
 
@@ -40,4 +40,3 @@ input, select{
 .btn{
     margin-top: 5px;
 }
-
