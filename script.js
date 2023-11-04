@@ -1,8 +1,8 @@
 function convertir() {
-    var inputValor = document.getElementById('inputValor').value;
-    var inputUnidad = document.getElementById('inputUnidad').value;
-    var outputUnidad = document.getElementById('outputUnidad').value;
-    var resultado = 0;
+    const inputValor = document.getElementById('inputValor').value;
+    const inputUnidad = document.getElementById('inputUnidad').value;
+    const outputUnidad = document.getElementById('outputUnidad').value;
+    let resultado = 0;
 
     switch(inputUnidad) {
       case 'm':
@@ -41,3 +41,18 @@ function convertir() {
     }
 
   }
+
+  function toggleTheme() {
+    var themeButton = document.getElementById('themeButton');
+    themeButton.classList.toggle('claro-activo');
+    themeButton.classList.toggle('oscuro-activo');
+    
+    document.body.classList.toggle('dark-mode');
+
+    var buttons = document.querySelectorAll('.btn');
+
+    buttons.forEach(function(button) {
+        button.classList.toggle('btn-success');
+        button.classList.toggle('btn-secondary');
+    });
+}
