@@ -1,3 +1,28 @@
+.btn-custom {
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+  }
+  
+  .btn-custom.btn-primary {
+    background-color: #007bff; /* Azul de Bootstrap */
+    border-color: #007bff;
+  }
+  
+  .btn-custom.btn-success {
+    background-color: #28a745; /* Verde de Bootstrap */
+    border-color: #28a745;
+  }
+  
+  /* Establece los estilos para la transición */
+  .btn-primary-to-success.transitioning {
+    background-color: #28a745; /* Transición a verde */
+    border-color: #28a745;
+  }
+  
+  .btn-success-to-primary.transitioning {
+    background-color: #007bff; /* Transición a azul */
+    border-color: #007bff;
+  }
+
 body{
     font-family: Arial, sans-serif;
     padding: 0;
@@ -121,6 +146,32 @@ input, select{
 .dark-mode input, .dark-mode select {
     background-color: #555;
     color: rgb(206, 206, 206); 
+}
+
+#resultado{
+    font-size: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+  
+  .resultado-animado {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes shake{
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
+}
+
+
+.shake{
+    animation: shake 0.5s;
 }
 
 
