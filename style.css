@@ -17,7 +17,6 @@ body{
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 100; 
 }
 
 #particles-js {
@@ -39,6 +38,92 @@ input, select{
 .btn{
     margin-top: 5px;
 }
+
+.theme-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.theme-button {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #FFF;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+}
+
+.button-text {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+}
+
+.claro {
+    left: 0;
+    color: black;
+    z-index: 1;
+}
+
+.oscuro {
+    right: 0;
+    color: black;
+    z-index: 1;
+}
+
+.glow {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: orange;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s;
+}
+
+.claro-activo .glow {
+    transform: translateX(0);
+}
+
+.oscuro-activo .glow {
+    transform: translateX(100%);
+}
+
+.dark-mode {
+    background: #333; 
+    color: rgb(206, 206, 206);
+}
+
+.dark-mode .converter-box {
+    background-color: #333; 
+    color: rgb(206, 206, 206); 
+}
+
+.dark-mode label {
+    color: rgb(206, 206, 206); 
+}
+
+.dark-mode select {
+    color: rgb(206, 206, 206);
+    background-color: #555; 
+}
+
+.dark-mode input, .dark-mode select {
+    background-color: #555;
+    color: rgb(206, 206, 206); 
+}
+
+
 
 @media (max-width: 475px) {
 
