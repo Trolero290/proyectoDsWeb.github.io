@@ -2,7 +2,12 @@ function convertir() {
     const inputValor = document.getElementById('inputValor').value;
     const inputUnidad = document.getElementById('inputUnidad').value;
     const outputUnidad = document.getElementById('outputUnidad').value;
+    const boton = document.querySelector('.btn');
+    const resultadoDiv = document.getElementById('resultado');
     let resultado = 0;
+
+    boton.classList.add('btn-custom-success');
+    boton.classList.remove('btn-custom-primary');
 
     switch(inputUnidad) {
       case 'm':
@@ -40,6 +45,14 @@ function convertir() {
         document.getElementById('resultado').innerText = resultado + outputUnidad;
     }
 
+    resultadoDiv.classList.remove('resultado-animado');
+    void resultadoDiv.offsetWidth;
+    resultadoDiv.classList.add('resultado-animado');
+
+    boton.classList.remove('shake');
+    void boton.offsetWidth;
+    boton.classList.add('shake');
+
   }
 
   function toggleTheme() {
@@ -56,3 +69,4 @@ function convertir() {
         button.classList.toggle('btn-secondary');
     });
 }
+
