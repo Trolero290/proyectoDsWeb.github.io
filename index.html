@@ -12,10 +12,10 @@
     <div class="converter-box">
         <h2>Sistema Metrico Longitud Conversor</h2>
         
-        <label for="inputValor">Ingresa un Valor</label>
+        <label for="inputValor" class="form-label fw-bold text-dark">Ingresa un Valor</label>
         <input type="number" id="inputValor" placeholder="Ingresa un Valor">
 
-        <label for="inputUnidad">De:</label>
+        <label for="inputUnidad" class="form-label fw-bold text-dark">De:</label>
         <select id="inputUnidad">
             <option value="m">Metro</option>
             <option value="Cm">Centimetro</option>
@@ -23,7 +23,7 @@
             <option value="Km">Kilometro</option>
         </select>
 
-        <label for="outputUnidad">Convertir A:</label>
+        <label for="outputUnidad" class="form-label fw-bold text-dark">Convertir A:</label>
 
         <select id="outputUnidad">
             <option value="m">Metro</option>
@@ -32,7 +32,7 @@
             <option value="Km">Kilometro</option>
         </select>
 
-        <button onclick="convertir()">Convertir</button>
+        <button class="btn btn-success"onclick="convertir()">Convertir</button>
 
         <h3>Resultado:</h3>
         <div id="resultado">Ingrese un valor</div>
